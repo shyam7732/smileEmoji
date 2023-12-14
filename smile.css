@@ -1,0 +1,100 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.smile{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	background-color: #ffff00;
+	border-radius: 100px;
+	border: 1px solid #000;
+	animation: face 5s 1s linear;
+}
+
+.smile .eyebrow{
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-top: 1px solid #000;
+	top: 30px;
+	left: 32px;
+	border-radius: 35%;
+}
+.smile .left{
+	animation: wink-eyebrow 0.7s 6s linear;
+}
+.smile .right{
+	position: absolute;
+	left: 96px;
+}
+
+.smile .eye{
+	position: relative;
+	width: 20px;
+	height: 40px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin-top: 20px;
+	margin-left: 30px;
+	overflow: hidden;
+}
+.smile .eye-left{
+	animation: wink 0.7s 6s linear;
+}
+.smile .eye-right{
+	margin-left: 95px;
+	margin-right: 30px;
+	bottom: 61px;
+}
+
+.smile .eye .half{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	border-radius: 50px;
+	top: 27px;
+	left: 7px;
+}
+
+.smile .nose{
+	position: absolute;
+	width: 5px;
+	height: 35px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	top: 67px;
+	left: 71px;
+}
+
+.smile 	.mouth{
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	border-bottom: 1px solid #000;
+	border-radius: 50%;
+	top: 100px;
+	left: 58px;
+}
+
+
+@keyframes face{
+	0%{ top: 0; left: 0; }
+	50%{ top: 0; left: calc(100% - 150px); transform: rotate(180deg); }
+	100%{ top: 0; left: 0; }
+}
+
+@keyframes wink{
+	0%{margin-top: 20px; height: 40px;}
+	50%{margin-top: 60px ; height: 0;}
+	100%{margin-top: 20px; height: 40px;}
+}
+
+@keyframes wink-eyebrow{
+	0%{ top: 30px; }
+	50%{ top: 50px; }
+	100%{ top: 30px; }
+}
